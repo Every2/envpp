@@ -1,4 +1,5 @@
 import os
+import sys
 from typing import LiteralString
 
 class AppError(Exception):
@@ -17,4 +18,4 @@ class FirstExecutionChecker:
             with open(self.flag, 'w') as f:
                 f.write('Sua primeira vez. :)')
             return 'Configurando o ambiente para você'
-    
+        
