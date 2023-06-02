@@ -5,4 +5,4 @@ app = typer.Typer()
 
 @app.command()
 def lint() -> None:
-    subprocess.run(['mypy', '--strict'])
+    subprocess.run(['mypy', '--strict', '.'])
