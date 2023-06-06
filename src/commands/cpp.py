@@ -19,10 +19,22 @@ def init(
     os.chdir(project_name)
     for dir in directories:
         os.makedirs(dir)
+        with open('CMakeLists.txt', 'w') as f:
+            f.write("")
+        
+        if dir == 'src':
+            with open('src\main.cpp', "w") as f:
+                f.write("")
+        
+        if dir == 'include':
+            with open('include\class.hpp', "w") as f:
+                f.write("")
 
     if tests:
         path = os.path.join(os.getcwd(), 'tests')
         os.makedirs(path)
+        with open('tests/test.cpp', "w") as f:
+                f.write("")
     
     if build:
         path = os.path.join(os.getcwd(), 'tests')
