@@ -32,7 +32,7 @@ def init(
                 subprocess.run(['yarn', 'create', 'vite'])
             except FileNotFoundError:
                 AppError('Você não tem o yarn instalado, instalando....')
-                subprocess.run('npm.cmd install --global yarn')
+                subprocess.run('npm', 'install', '--global', 'yarn')
                 subprocess.run(['exec', '$SHELL', 'yarn', 'create', 'vite']) 
             
     if pnpm:
