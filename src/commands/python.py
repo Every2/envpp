@@ -12,11 +12,13 @@ def init(
     project_name: Annotated[str, typer.Argument(help="Nome do seu projeto")],
     docs: Annotated[bool, typer.Option(help = "Cria um diretório para documentação, por exemplo: something.md")] = False,
     scripts: Annotated[bool, typer.Option(help = "Cria um diretório para scripts, por exemplo: something.sh")] = False,
-    tests: Annotated[bool,  typer.Option(help= "Cria um diretório para testes usando pytest")] = True
+    tests: Annotated[bool,  typer.Option(help= "Cria um diretório para testes usando pytest")] = True,
+    docker: Annotated[bool, typer.Option(help='Cria um dockerfile simples')] = False
 ) -> None:
     
     try:
-        subprocess.run(['pdm'])
+        subprocess.run(['pdm', 'init'])
+        subprocess.run(['pdm', 'add', 'mypy', 'pytest', 'pip-audit', 'bandit'])
     except:
         AppError('Você não tem o pdm instalado, instalando....')
         subprocess.run(['pip', 'install', '--user', 'pdm'])
@@ -45,6 +47,10 @@ def init(
         os.makedirs(path)
         with open("scripts/start.sh", "w") as file:
             file.write("")
+
+    if docker:
+        with open('Dockerfile', 'w') as file:
+            file.write('FROM python:3.11-buster\n\nRUN mkdir app\n\nWORKDIR /app\n\nRUN pip install envpp')
 
 @app.command()
 def lint() -> None:
