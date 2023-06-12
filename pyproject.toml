@@ -6,12 +6,13 @@ description = ""
 authors = [
     {name = "Every"},
 ]
+home-page = "https://github.com/Every2/envpp"
 dependencies = [
     "typer[all]>=0.9.0",
 ]
 requires-python = ">=3.11"
 readme = "README.md"
-license = {text = "MIT"}
+
 
 [build-system]
 requires = ["pdm-backend"]
