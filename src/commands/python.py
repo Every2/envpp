@@ -26,9 +26,10 @@ def init(
         os.makedirs(path)
         os.chdir(project_name)
         subprocess.run(['pdm', 'init'])
-        subprocess.run(['pdm', 'add', 'mypy', 'pytest', 'pip-audit', 'bandit'])
+        subprocess.run(['pdm', 'add', 'mypy', 'pip-audit', 'bandit'])
     
     if tests:
+        subprocess.run(['pdm', 'add', 'pytest'])
         files = ['__init__.py', 'test.py']
         path = os.path.join(os.getcwd(), 'tests')
         os.makedirs(path)
@@ -50,7 +51,7 @@ def init(
 
     if docker:
         with open('Dockerfile', 'w') as file:
-            file.write('FROM python:3.11-buster\n\nRUN mkdir app\n\nWORKDIR /app\n\nRUN pip install envpp')
+            file.write('FROM python:3.11-buster\n\nRUN mkdir app\n\nWORKDIR /app\n\n')
 
 @app.command()
 def lint() -> None:

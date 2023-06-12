@@ -1,6 +1,6 @@
 
 [project]
-name = "cli-python"
+name = "envpp"
 version = "0.1.0"
 description = ""
 authors = [

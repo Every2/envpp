@@ -11,7 +11,7 @@ def init(
     npm: Annotated[bool, typer.Option(help='Se você quiser usar o npm use essa opção')] = False,
     yarn: Annotated[bool, typer.Option(help='Se você quiser usar o yarn use essa opção (Não é necessário já ter instalado)')] = False,
     pnpm: Annotated[bool, typer.Option(help='Se você quiser usar o pnpm use essa opção (Não é necessário já ter instalado)')] = False,
-    docker: Annotated[bool, typer.Option(help='Cria um dockerfile simples')] = False
+    docker: Annotated[bool, typer.Option(help='Cria um docker compose')] = False
 ) -> None:
     
     if npm:
@@ -55,5 +55,5 @@ def init(
     if docker:
         with open('docker-compose.yml', 'w') as file:
             file.write('version: "3.4"\n\nservices:\n vite_docker:\n image: node:alpine\n container_name: vite\n entrypoint: /bin/sh\n ports:\n - 8000:8000\n working_dir: /srv/app\n volumes:\n - type: bind\n source: ./\n target: /srv/app\ntty: true')
-            
+
                     
