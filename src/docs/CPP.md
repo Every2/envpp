@@ -8,9 +8,11 @@ build: É deixado opcional, mas você pode usar caso queira usar arquivos de bui
 
 tests: Cria um diretório de testes para você escrever seus testes em c++.
 
+Docker: Vai criar um dockerfile na pasta do seu projeto.
+
 # Por que o vcpkg?
 
-Foi o que eu utilizei para desenvolver meus projetos, sei da existências de outros gerenciadores de pacotes, mas não testei, é possível que seja mudado no futuro, mas por enquanto será a versão utilizada. 
+Foi o que eu utilizei para desenvolver meus projetos, sei da existências de outros gerenciadores de pacotes, mas não implementei porque ainda não foi testado, mas você pode usar qualquer um de sua preferência.
 
 # Posso usar a cli com Visual Studio?
 
@@ -36,3 +38,6 @@ build: É usado para armazenar arquivos de compilação e artefatos intermediár
 
 O vcpkg tira a utlidade do diretório.
 
+# Por que não um docker compose igual em Javascript?
+
+Como não lido direto com APIs ou algo que necessite de um docker compose. Basicamente a mesma resposta dado pro Python. 

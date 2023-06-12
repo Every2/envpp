@@ -12,6 +12,7 @@ def init(
     vcpkg: Annotated[bool, typer.Option(help="Instala o vcpkg para gerenciamento de libs(Obs: Precisa do git instalado)")] = False,
     tests: Annotated[bool,  typer.Option(help= "Cria um diretório para testes")] = True,
     build: Annotated[bool,  typer.Option(help= "Cria um diretório para build")] = False,
+    docker: Annotated[bool, typer.Option(help='Cria um dockerfile simples')] = False
 ) -> None:
     directories = ['src', 'include', 'lib', 'bin']
     path = os.path.join(os.getcwd(), project_name)
@@ -51,3 +52,7 @@ def init(
             os.makedirs('src/')
             os.chdir('~/src')
             subprocess.run(['git', 'clone', 'https://github.com/Microsoft/vcpkg.git'])
+
+    if docker:
+        with open('Dockerfile', 'w') as file:
+            file.write('FROM mcr.microsoft.com/devcontainers/cpp\n\nRUN mkdir app\n\nWORKDIR /app\n\n')
