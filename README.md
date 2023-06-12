@@ -35,6 +35,5 @@ Abra uma issue ou uma pull request. :)
 - [x] Dar suporte a C++.
 - [x] Usar docker para fazer o ambiente ser reproduzível em qualquer lugar.
 - [x] Criar documentação para os comandos.
-- [ ] Disponibilizar como um pacote no pypi.
 - [x] Concluir fase de testes no ambiente Linux.
 - [x] Criar documentação geral para o projeto.
