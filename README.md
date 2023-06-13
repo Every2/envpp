@@ -14,19 +14,20 @@ Cli para criar projetos em Python, Javascript e C++ que pode ser criada em qualq
 
 # FAQ
 
-- Por que não continuar a versão em Javascript?
+# Por que não continuar a versão em Javascript?
 
 Gostei e queria testar o typer, então decidi refazer o projeto em Python adicionando outras linguagens que uso no dia a dia.
 
-- Posso usar no Linux?
+# Posso usar no Linux?
 
 Sim, pode usar no Windows e em sistemas UNIX.
 
-- Se eu excluir ou editar os diretórios, eu quebro alguma coisa?
+# Se eu excluir ou editar os diretórios, eu quebro alguma coisa?
 
 Não, você pode remover e adicionar coisas tranquilamente. A cli apenas cria os projetos e em alguns casos ele só automatiza processos manuais.
 
-- Quero contribuir pro projeto!
+# Quero contribuir pro projeto!
+
 Abra uma issue ou uma pull request. :)
 
 # Objetivos:
