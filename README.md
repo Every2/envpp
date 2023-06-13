@@ -20,7 +20,7 @@ Gostei e queria testar o typer, então decidi refazer o projeto em Python adicio
 
 - **Posso usar no Linux?**
 
-Sim, pode usar no Windows e em sistemas em UNIX.
+Sim, pode usar no Windows e em sistemas UNIX.
 
 - **Se eu excluir ou editar os diretórios, eu quebro alguma coisa?**
 
