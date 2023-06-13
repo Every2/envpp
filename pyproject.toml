@@ -1,18 +1,19 @@
 
 [project]
-name = "envpp"
+name = "envppp"
 version = "0.1.0"
-description = ""
+description = "Uma cli para criar projetos em python, javascript e C++"
 authors = [
     {name = "Every"},
 ]
-home-page = "https://github.com/Every2/envpp"
 dependencies = [
     "typer[all]>=0.9.0",
 ]
 requires-python = ">=3.11"
 readme = "README.md"
 
+[project.urls]
+Repository = "https://github.com/Every2/envpp"
 
 [build-system]
 requires = ["pdm-backend"]
